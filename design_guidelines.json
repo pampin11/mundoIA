@@ -1,0 +1,132 @@
+{
+  "theme": "dark",
+  "archetype": "7 (Electric & Neon)",
+  "project_type": "hybrid_fullstack",
+  "typography": {
+    "font_imports": [
+      "@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap');",
+      "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');"
+    ],
+    "headings": {
+      "fontFamily": "'Clash Display', sans-serif",
+      "weights": ["600", "700"],
+      "usage": "Hero Titles, Article H1/H2/H3, Section Headers",
+      "classes": "font-display tracking-tight"
+    },
+    "body": {
+      "fontFamily": "'Satoshi', sans-serif",
+      "weights": ["400", "500", "700"],
+      "usage": "Main article text, paragraphs, descriptions",
+      "classes": "font-sans leading-relaxed"
+    },
+    "mono": {
+      "fontFamily": "'JetBrains Mono', monospace",
+      "weights": ["400", "500"],
+      "usage": "Overlines, dates, reading time, tags, ADVERTISEMENT labels",
+      "classes": "font-mono text-xs uppercase tracking-[0.2em]"
+    }
+  },
+  "colors": {
+    "background": {
+      "default": "#05050A",
+      "surface": "#0A0A0F",
+      "surface_elevated": "rgba(255, 255, 255, 0.03)",
+      "glass": "rgba(10, 10, 15, 0.6)"
+    },
+    "border": {
+      "default": "rgba(255, 255, 255, 0.08)",
+      "hover": "rgba(255, 255, 255, 0.15)",
+      "glass": "rgba(255, 255, 255, 0.05)"
+    },
+    "brand": {
+      "primary": "#3B82F6",
+      "primary_glow": "rgba(59, 130, 246, 0.5)",
+      "secondary": "#A855F7",
+      "secondary_glow": "rgba(168, 85, 247, 0.5)"
+    },
+    "text": {
+      "primary": "#F8F9FA",
+      "secondary": "#9CA3AF",
+      "muted": "#6B7280",
+      "inverse": "#05050A"
+    },
+    "categories": {
+      "herramientas-ia": "#3B82F6",
+      "prompts": "#A855F7",
+      "ganar-dinero": "#10B981",
+      "automatizacion": "#F59E0B",
+      "ia-estudiantes": "#EC4899"
+    }
+  },
+  "layout": {
+    "spacing_scale": "Tailwind default (p-4, p-8, p-12, p-16, p-24, p-32)",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "article_container": "max-w-3xl mx-auto",
+    "grid_system": {
+      "featured_articles": "Bento Grid (md:grid-cols-12 gap-6). Hero article spans 8 cols, others span 4.",
+      "latest_articles": "Grid md:grid-cols-2 lg:grid-cols-3 gap-8",
+      "blog_layout": "Grid lg:grid-cols-12 gap-12. Article content spans 8 cols, Sidebar spans 4 cols."
+    }
+  },
+  "components": {
+    "header": {
+      "style": "Glassmorphism: sticky top-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/10",
+      "elements": "Logo (Clash Display), Desktop Nav Links, Search Icon, Mobile Hamburger Menu"
+    },
+    "hero": {
+      "style": "Left-aligned heavy typography over dark noise texture with subtle neon blue/purple orb glows in background. High emotional impact.",
+      "title": "text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter"
+    },
+    "article_cards": {
+      "style": "Neumorphic/Glass variant. bg-white/[0.02] border border-white/[0.08] hover:border-white/[0.15] rounded-2xl overflow-hidden transition-all duration-300",
+      "image_overlay": "bg-gradient-to-t from-[#05050A] via-[#05050A]/40 to-transparent",
+      "hover_effect": "Image scales slightly (scale-105), border glows slightly."
+    },
+    "category_pills": {
+      "style": "Rounded-full px-4 py-2 text-sm font-mono border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-colors"
+    },
+    "adsense_slots": {
+      "style": "Subtle integration. border border-dashed border-white/20 rounded-lg bg-white/[0.01] flex flex-col items-center justify-center relative p-4",
+      "label": "Absolute top-2 left-4 text-[10px] font-mono text-gray-500 tracking-widest uppercase content-['PUBLICIDAD']"
+    },
+    "reading_progress_bar": {
+      "style": "Fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-[60] origin-left"
+    },
+    "buttons": {
+      "primary": "bg-blue-600 hover:bg-blue-500 text-white rounded-lg px-6 py-3 font-medium transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
+    }
+  },
+  "micro_interactions": {
+    "hover_states": "All interactive elements must have explicit hover states (color change + transition).",
+    "scroll_animations": "Use framer-motion to stagger-fade-in article lists (y: 20 -> 0, opacity: 0 -> 1).",
+    "smooth_scroll": "Implement Lenis library for premium scrolling momentum."
+  },
+  "media": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1773558057883-c15a220761ce?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxuZW9uJTIwdGVjaG5vbG9neSUyMGFic3RyYWN0JTIwZGFya3xlbnwwfHx8fDE3NzY5NTkyMDF8MA&ixlib=rb-4.1.0&q=85",
+      "featured_ai": "https://images.unsplash.com/photo-1761912149936-8f662fc2a13e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxhaSUyMGZ1dHVyaXN0aWMlMjBnbG93aW5nJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzc2OTU5MjAxfDA&ixlib=rb-4.1.0&q=85",
+      "featured_money": "https://images.pexels.com/photos/6203470/pexels-photo-6203470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "featured_automation": "https://images.unsplash.com/photo-1764258560164-97f682adef36?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxhaSUyMGZ1dHVyaXN0aWMlMjBnbG93aW5nJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzc2OTU5MjAxfDA&ixlib=rb-4.1.0&q=85",
+      "general_tech": "https://images.pexels.com/photos/8108685/pexels-photo-8108685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use stroke-width 1.5 for a sleeker, premium feel."
+  },
+  "testing": {
+    "data_testid_rules": "All interactive elements MUST include data-testid attributes (e.g., data-testid='nav-home-link', data-testid='article-card-1')."
+  },
+  "instructions_to_main_agent": [
+    "1. Setup Tailwind config extending the fonts to 'Clash Display' (font-display), 'Satoshi' (font-sans), and 'JetBrains Mono' (font-mono).",
+    "2. Add a global noise texture overlay using a base64 repeating SVG or CSS radial gradients to prevent the #05050A background from looking flat.",
+    "3. Build the Hero section using the 'hero_bg' image mapped as a blurred/darkened background, with stark, left-aligned typography on top.",
+    "4. Implement Shadcn UI where applicable (Forms, Dialogs, Dropdowns for search/filters) but override background to match dark theme.",
+    "5. For the Adsense slots, create a dedicated reusable React component <AdSlot /> that accepts dimensions. Render it with a dashed border and 'PUBLICIDAD' label so it looks intentional in the layout.",
+    "6. Table of Contents in the blog article sidebar must be sticky. Use IntersectionObserver to highlight the current section.",
+    "7. Do NOT use Inter or Roboto. Only the imported fonts in this JSON.",
+    "8. Implement a Reading Progress Bar at the top of the article pages.",
+    "9. Populate the app with 10 pre-written dummy articles in Spanish focusing on AI, prompts, automation, and making money.",
+    "10. Build necessary Legal pages (Privacy, Cookies, About, Contact) and a fixed Cookie Banner at the bottom."
+  ]
+}
