@@ -1,54 +1,59 @@
 import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { Toaster } from "sonner";
+import Layout from "@/components/Layout";
+import Home from "@/pages/Home";
+import Article from "@/pages/Article";
+import Category from "@/pages/Category";
+import Search from "@/pages/Search";
+import Contact from "@/pages/Contact";
+import About from "@/pages/About";
+import Privacy from "@/pages/Privacy";
+import Cookies from "@/pages/Cookies";
+import NotFound from "@/pages/NotFound";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+function ScrollToTop() {
+    // Handled at route-change level inside pages when needed
+    return null;
+}
 
 function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+    useEffect(() => {
+        document.documentElement.classList.add("dark");
+    }, []);
+
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <ScrollToTop />
+                <Layout>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/articulo/:slug" element={<Article />} />
+                        <Route path="/categoria/:slug" element={<Category />} />
+                        <Route path="/buscar" element={<Search />} />
+                        <Route path="/contacto" element={<Contact />} />
+                        <Route path="/sobre-nosotros" element={<About />} />
+                        <Route path="/privacidad" element={<Privacy />} />
+                        <Route path="/cookies" element={<Cookies />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </Layout>
+            </BrowserRouter>
+            <Toaster
+                position="bottom-right"
+                toastOptions={{
+                    style: {
+                        background: "rgba(10,10,15,0.9)",
+                        border: "1px solid rgba(168,85,247,0.3)",
+                        color: "#F8F9FA",
+                        backdropFilter: "blur(16px)",
+                    },
+                }}
+            />
+        </div>
+    );
 }
 
 export default App;
